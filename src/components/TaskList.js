@@ -32,12 +32,12 @@ const TaskList = ({ tasks, onEdit, onDelete, onNewTask }) => {
             </tr>
           </thead>
           <tbody>
-          {!tasks?.content || tasks.content.length === 0 ? (
+          {!tasks || tasks?.length === 0 ? (
               <tr>
                 <td colSpan="7" className="text-center">No tasks found</td>
               </tr>
             ) : (
-                tasks?.content?.map((task) => (
+                tasks?.map((task) => (
                 <tr key={task.id}>
                   <td><input type="checkbox" /></td>
                   <td>{task.assignedTo || '-'}</td>

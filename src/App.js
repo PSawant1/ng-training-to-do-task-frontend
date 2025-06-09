@@ -12,6 +12,7 @@ function App() {
   const loadTasks = async () => {
     const res = await getTasks();
     setTasks(res.data);
+    console.log('Tasks loaded:', res.data);
   };
 
   useEffect(() => {
